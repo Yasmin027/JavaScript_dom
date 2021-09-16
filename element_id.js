@@ -1,3 +1,21 @@
+【DOMを操作してh1要素の中身を変える】
+
+{
+  function update() {
+    // document.querySelector('h1').textContent = 'Changed!';  
+    // 文書内から特定の要素を取得するquerySelector()/中身のテキストを.textContentに代入して表現
+
+    // document.querySelector('#target').textContent = 'Changed!'; ←id属性
+    document.getElementById('target').textContent = 'Changed!'; ←idを指定して要素を探せるgetElementById() ※id名に#不要
+  }
+
+  setTimeout(update, 1000);  ←1秒後に書き換える命令
+}
+
+
+
+
+
 // IDをキーに要素を取得
 // getElementByIdメソッド
 
