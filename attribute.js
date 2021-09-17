@@ -2,7 +2,7 @@
 
 {
   document.querySelector('button').addEventListener('click', () => {
-    const targetNode = document.getElementById('target')
+    const targetNode = document.getElementById('target');　　←targetNodeは定数名で、そこに
 
     targetNode.textContent = 'Changed!';
     targetNode.title = 'This is title!'; 
