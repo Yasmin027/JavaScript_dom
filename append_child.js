@@ -1,4 +1,24 @@
 
+【要素の追加】
+（リストの末尾にitem2という子要素リストを追加）
+{
+  document.querySelector('button').addEventListener('click', () => {
+    //①li要素を作る(.cleateElement)
+    const item2 = document.createElement('li');
+    //➁要素の中のテキストを作る
+    item2.textContent = 'item 2';
+
+    //③親要素であるul要素を取得
+    const ul =document.querySelector('ul');
+    //④ulの子要素の末尾にitem2を追加(.appendChild())
+    ul.appendChild(item2)
+  });
+}
+
+
+
+
+
 
 【DOMツリーの階層関係から要素を取得する】
 
