@@ -15,3 +15,17 @@
     ul.insertBefore(copy, item2);
   });
 }
+
+
+
+【要素の削除】
+
+{
+  document.querySelector('button').addEventListener('click', () => {
+    const item1 = documentquerySelectorAll('list')[1];
+
+    // item1.remove(); ←一部の古いブラウザでは使えない
+    //親Node.removeChild(削除するNode)
+    document.querySelector('ul').removeChild(item1);
+  });
+}
