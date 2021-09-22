@@ -37,3 +37,34 @@ class：属性（プロパティ）と操作（メソッド）を定義したも
 
 オブジェクト：クラスとかインスタンスとかのこと（現実世界には存在せずにモデル上のみに存在する何者かをふんわり表現したもの）
 または、データとそのデータをやり取りするための命令が入ってデータ構造
+
+
+
+'use strict';
+{
+  const text = document.querySelector('textarea');
+
+  //フォーカスが当たった時のイベント
+  text.addEventListener('focus', () => {
+    console.log('focus');
+  });
+
+  //フォーカスが外れた時のイベント
+  text.addEventListener('blur', () => {
+    console.log('blur');
+  });
+
+  //内容が更新された時のイベント
+  text.addEventListener('input', () => {
+    console.log('input');
+  });
+  //入力された文字数を表示
+  text.addEventListener('input', () => {
+    console.log(text.value.length);
+  });
+
+  //更新が確定された時のイベント
+  text.addEventListener('change', () => {
+    console.log('change');
+  });
+}
