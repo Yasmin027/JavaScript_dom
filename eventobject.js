@@ -67,4 +67,16 @@ class：属性（プロパティ）と操作（メソッド）を定義したも
   text.addEventListener('change', () => {
     console.log('change');
   });
+
+  
+  【フォーム送信イベント】
+
+'use strict';
+{
+  document.querySelector('form').addEventListener('submit', e => {
+    e.preventDefault(); //←ページ移動（遷移）が発生しページがリロードしてしまわないようにEventオブジェクトを引数に渡して、既定の動作をキャンセルすることができるpreventDefault()というメソッドを実行
+    console.log('submit');
+  });
 }
+//formタグを使うことで、ボタンをクリックせずともEnterキーでフォームを送信できる
+//↑を実行するにはformタグの中にbuttonタグが必要だが、formタグの中に<input type="text">が一つだけの場合はbuttonタグを省略できる
