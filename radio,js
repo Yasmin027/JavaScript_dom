@@ -1,0 +1,30 @@
+【ラジオボタンの操作】
+
+'use strict';
+
+{
+  document.querySelector('button').addEventListener('click', () => {
+    //全てのinput要素を取得↓
+    const colors = document.querySelectorAll('input');
+
+    let selectedColor; //←宣言のみなので値はundefined
+
+    //colorsの一つ一つの【ラジオボタンの操作】
+要素をcolorとして次の処理をしなさいと命令↓
+    colors.forEach(color => {
+      if (color.checked === true) {  //← ===trueは慣れれば省略可能
+        selectedColor = color.value; //←変数の初期化（代入）で値はcolor.value
+      }
+    });
+
+    const li = document.createElement('li');
+    li.textContent = selectedColor;
+    document.querySelector('ul').appendChild(li);
+  });
+}
+
+
+//let 変数名 = 値;のように書くことで変数を宣言と同時に初期化できる
+//constで宣言できる「定数」は必ず宣言時に初期化しなければならない
+//let（変数）だけは宣言のみが可能
+//宣言だけ実施した変数にはundefinedという特殊な値が格納されている
